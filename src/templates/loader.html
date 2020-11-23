@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% include "includes/head.html"  %}
+
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	{% include "includes/header.html"  %}
+
+	{% block content %}
+	<section class="main main--loader">
+		<canvas id='snow'></canvas>
+		<div class="main__inner">
+			<div class="main__title">Новогоднее<br><span> родео от </span><img src="img/logo.svg" alt="emg"></div>
+			<div class="main__text">испытай удачу — и создай<br> праздничное настроение!</div>
+		</div>
+
+		<div class="loader">
+			<!-- <div class="loader__img">
+				<img src="img/loader.gif" alt="loader">
+			</div> -->
+		</div>
+
+	</section>
+	{% endblock %}
+
+	{% include "includes/footer.html"  %}
+</body>
+</html>
+		
+
+			
+
+

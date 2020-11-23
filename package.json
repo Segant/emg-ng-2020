@@ -1,0 +1,30 @@
+{
+  "name": "gulp-nunjucks-scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp"
+  },
+  "author": "JSL",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap-4-grid": "^2.4.1",
+    "bower": "^1.8.2",
+    "browser-sync": "^2.19.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-nunjucks": "^5.0.1",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-svgo": "^2.2.1",
+    "masonry-layout": "^4.2.2",
+    "materialize-css": "^1.0.0-beta"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'DaxlinePro';
+    src: url('DaxlinePro-Medium.woff2') format('woff2'),
+        url('DaxlinePro-Medium.woff') format('woff'),
+        url('DaxlinePro-Medium.svg#DaxlinePro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DaxlinePro';
+    src: url('DaxlinePro-ExtraBold.woff2') format('woff2'),
+        url('DaxlinePro-ExtraBold.woff') format('woff'),
+        url('DaxlinePro-ExtraBold.svg#DaxlinePro-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
