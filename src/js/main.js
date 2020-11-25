@@ -127,6 +127,7 @@ window.onload = () => {
 			this.btn = params.btn || 'spin-btn';
 			this.activeClass = params.activeClass || 'active';
 			this.itemsHeight = params.itemsHeight || '20';
+			this.btnCallback = params.btnCallback;
 
 			this.setup();
 		}
@@ -154,46 +155,67 @@ window.onload = () => {
 				const randomNum = Math.floor(Math.random() * items.length)
 				items[randomNum].classList.add(this.activeClass);
 				spinnerBody.style.transform = `translateY(-${itemsHeight * randomNum}px)`;
+
+				items[randomNum].classList.add('spinned')
+
+				this.btnCallback();
 			}
 
 
 			btn.forEach((el, i) => {
 				el.addEventListener('click', btnFunc);
-				console.log('object');
 			})
 
 			
 		}
 	}
 
-	if(document.querySelector(`.spin`)){
-		new Spin({
-			root: '.spin',
-			btn: '.spin-btn',
-			itemsHeight : '100'
-		})
-	}
-
-	$(`.spinBtn`).click(function () {
-		$(`.spinBtn`).click(function(){
-			$(`.bull`).addClass('bull--active');
-
-			// document.querySelector(`.main__text`).classList.add('main__text--active')
-			gsap.to(".bull", {backgroundImage:'url(../img/bull_horn.svg)'});
-			
-		})
-		
-	});
-
+	
 	$('.spin-item__text').hide();
-	console.log($('.sub__btn'));
-	$('.main__text, .main__btns').hide();
+	$('.main__text, .main__btns , .main__btns-res').hide();
 
 	$('.sub__btn').click(function (e) {
 		$('.main').addClass('main--spin');
 		$('.main__text, .main__btns').show();
 		gsap.to(".sub", {opacity: 0});
 	});
+
+	if(document.querySelector(`.spin`)){
+		new Spin({
+			root: '.spin',
+			btn: '.spin-btn',
+			itemsHeight : '100',
+			btnCallback: function(){
+				$('.main__text , .main__btns').fadeOut();
+
+				if($(window).width() < 1024){
+					gsap.to(".bull", {
+						// backgroundImage:'url(../img/bull_horn.svg)',
+						y: -20,
+						scale:"2",
+						duration: 2,
+						onComplete: showContent,
+					});
+
+					return
+				}
+				
+				gsap.to(".bull", {
+					// backgroundImage:'url(../img/bull_horn.svg)',
+					y: 40,
+					scale:"1.2",
+					duration: 2,
+					onComplete: showContent,
+				});
+			}
+		})
+	}
+
+	function showContent(){
+		$('.main__title').html('А вот и твой <br> подарок!');
+		$('.main__text-res , .main__btns-res').fadeIn();
+	}
+
 
 
 };
