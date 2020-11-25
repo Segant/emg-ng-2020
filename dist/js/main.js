@@ -175,7 +175,7 @@ window.onload = () => {
 	}
 
 	$(`.spinBtn`).click(function () {
-		$(`.spinBtn`).addEventListener('click', function(){
+		$(`.spinBtn`).click(function(){
 			$(`.bull`).addClass('bull--active');
 
 			// document.querySelector(`.main__text`).classList.add('main__text--active')

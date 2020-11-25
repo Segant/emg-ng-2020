@@ -123,6 +123,7 @@ body{
 
 .main--loader {
 	justify-content: center;
+	overflow: hidden;
 
 	.main__title {
 		font-size: 52px;
@@ -144,6 +145,7 @@ body{
 	}
 
 	.main__text {
+		display: block !important;
 		font-weight: normal;
 		text-align: center;
 		font-size: 20px;
@@ -161,9 +163,15 @@ body{
 	right: 0;
 	margin: auto;
 
-	&__item {
-		// width: 46px;
-		// height: 46px;
+	&__img {
+		position: absolute;
+		width: 60px;
+		height: 252px;
+		bottom: -12px;
+		left: 0;
+		right: 0;
+		margin: auto;
+	
 	}
 
 }
@@ -361,6 +369,7 @@ body{
 .spinBtn{
 	width: 130px;
 	height: 150px;
+	cursor: pointer;
 	border: none;
 	background-color: transparent;
 	background-image: url('../img/wavy-arrow.gif');

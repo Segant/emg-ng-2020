@@ -189,7 +189,8 @@ body {
 .main--loader {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  overflow: hidden; }
   .main--loader .main__title {
     font-size: 52px;
     line-height: 50px;
@@ -205,6 +206,7 @@ body {
       -webkit-transform: translate(8px, 12px);
               transform: translate(8px, 12px); }
   .main--loader .main__text {
+    display: block !important;
     font-weight: normal;
     text-align: center;
     font-size: 20px;
@@ -217,6 +219,14 @@ body {
   left: 0;
   right: 0;
   margin: auto; }
+  .loader__img {
+    position: absolute;
+    width: 60px;
+    height: 252px;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    margin: auto; }
 
 .main--home {
   padding-top: 65px;
@@ -338,6 +348,7 @@ body {
 .spinBtn {
   width: 130px;
   height: 150px;
+  cursor: pointer;
   border: none;
   background-color: transparent;
   background-image: url("../img/wavy-arrow.gif");
