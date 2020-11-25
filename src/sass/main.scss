@@ -41,14 +41,12 @@ ul {
 	list-style: none;
 }
 
-#snow {
-	position: absolute;
-	z-index: -1;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
+body{
+	position: relative;
+	z-index: 0;
 }
+
+
 
 .title {
 	font-size: 28px;
@@ -60,11 +58,49 @@ ul {
 	line-height: 33px;
 }
 
+.bg {
+	display: block;
+	background: #bd1d85;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+  }
+  
+  .bg:before {
+	content: "";
+	position: absolute;
+	opacity: 0.1;
+	width: 200%;
+	height: 200%;
+	left: -50%;
+	top: -50%;
+	background: url('../img/words_bg2.gif') repeat;
+	background-size: 320px;
+	@media(max-width: 1024px) {
+		transform: rotate(-10deg);
+	}
+  }
+  
+.frame-body{
+	position: relative;
+	z-index: -1;
+}
+
+#snow {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
 .main {
 	height: 100vh;
 	min-height: 900px;
-	background-color: #BD1D85;
-	background-image: url('../img/words.svg');
+	// background-color: #BD1D85;
+	// background-image: url('../img/words.svg');
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -80,6 +116,7 @@ ul {
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
+		z-index: 1;
 	}
 
 }
@@ -246,6 +283,7 @@ ul {
 		border-radius: 12px;
 		border: none;
 		padding: 3px 9px;
+		cursor: pointer;
 	}
 
 
@@ -274,9 +312,9 @@ ul {
 	}
 }
 
-.main--spin{
+// .main--spin{
 	
-    padding-top: 78px;
+//     padding-top: 78px;
 
 	.main__title{
 		font-weight: bold;
@@ -313,11 +351,11 @@ ul {
 	}
 
 	.main__text--footer{
-		margin-top: -25px;
+		// margin-top: -25px;
 		margin-bottom: 0;
 		font-size: 18px;
 	}
-}
+// }
 
 
 .spinBtn{
@@ -344,6 +382,7 @@ ul {
 
 	}
 }
+
 
 
 

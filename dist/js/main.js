@@ -188,4 +188,14 @@ window.onload = () => {
 	});
 
 
+	console.log($('.sub__btn'));
+	$('.main__text, .main__btns').hide();
+
+	$('.sub__btn').click(function (e) {
+		$('.main').addClass('main--spin');
+		$('.main__text, .main__btns').show();
+		gsap.to(".sub", {opacity: 0});
+	});
+
+
 };
