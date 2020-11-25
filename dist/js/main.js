@@ -170,12 +170,18 @@ window.onload = () => {
 		}
 	}
 
+	setTimeout(function(){
+		$('.main--loader').fadeOut();
+		gsap.to(".main--bull", {opacity: 1});
+	}, 1000)
+
+	
 	
 	$('.spin-item__text').hide();
 	$('.main__text, .main__btns , .main__btns-res').hide();
 
 	$('.sub__btn').click(function (e) {
-		$('.main').addClass('main--spin');
+		$('.main--bull').addClass('main--spin');
 		$('.main__text, .main__btns').show();
 		gsap.to(".sub", {opacity: 0});
 	});
@@ -192,7 +198,7 @@ window.onload = () => {
 					gsap.to(".bull", {
 						// backgroundImage:'url(../img/bull_horn.svg)',
 						y: -20,
-						scale:"2",
+						scale:"1.5",
 						duration: 2,
 						onComplete: showContent,
 					});
@@ -207,14 +213,21 @@ window.onload = () => {
 					duration: 2,
 					onComplete: showContent,
 				});
+				
 			}
 		})
 	}
 
 	function showContent(){
-		$('.main__title').html('А вот и твой <br> подарок!');
+		$('.main--bull .main__title').html('А вот и твой <br> подарок!');
 		$('.main__text-res , .main__btns-res').fadeIn();
 	}
+
+	$('.btnGetGift').click(function(e){
+		e.preventDefault();
+		$('.main--bull').fadeOut();
+		gsap.to(".main--gift", {opacity: 1});
+	})
 
 
 
