@@ -353,6 +353,16 @@ body {
   width: 100%;
   top: 201px; }
 
+.main--gift .main__text {
+  display: block !important;
+  margin-bottom: 0; }
+
+.main--gift .main__img {
+  margin-top: 0;
+  width: 600px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7); }
+
 @media (max-width: 1000px) {
   .main {
     min-height: 100vh;

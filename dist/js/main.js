@@ -174,20 +174,18 @@ window.onload = () => {
 		})
 	}
 
-	document.querySelectorAll(`.spinBtn`).forEach(btn => {
-		btn.addEventListener('click', function(){
-			document.querySelector(`.bull`).classList.add('bull--active');
+	$(`.spinBtn`).click(function () {
+		$(`.spinBtn`).addEventListener('click', function(){
+			$(`.bull`).addClass('bull--active');
 
-			document.querySelector(`.main__text`).classList.add('main__text--active')
-
-			setTimeout( ()=> {
-				
-			}, 2)
+			// document.querySelector(`.main__text`).classList.add('main__text--active')
+			gsap.to(".bull", {backgroundImage:'url(../img/bull_horn.svg)'});
+			
 		})
 		
 	});
 
-
+	$('.spin-item__text').hide();
 	console.log($('.sub__btn'));
 	$('.main__text, .main__btns').hide();
 

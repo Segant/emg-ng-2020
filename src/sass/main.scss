@@ -383,6 +383,19 @@ body{
 	}
 }
 
+.main--gift{
+	.main__text{
+		display: block !important;
+		margin-bottom: 0;
+	}
+
+	.main__img{
+		margin-top: 0;
+		width: 600px;
+		transform: scale(0.7);
+	}
+}
+
 
 
 
