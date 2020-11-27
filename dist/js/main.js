@@ -213,7 +213,7 @@ window.onload = () => {
 					gsap.to(".bull", {
 						// backgroundImage:'url(../img/bull_horn.svg)',
 						y: 20,
-						scale:"1.9",
+						scale:"1.8",
 						duration: 2,
 						onComplete: showContent,
 					});
