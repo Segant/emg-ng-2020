@@ -149,7 +149,8 @@ window.onload = () => {
 			
 			const btnFunc = () => {
 				items.forEach((item, i) => {
-					item.classList.remove(this.activeClass)
+					item.classList.remove(this.activeClass);
+					item.classList.remove('spinned');
 				});
 
 				const randomNum = Math.floor(Math.random() * items.length)
@@ -175,8 +176,6 @@ window.onload = () => {
 		gsap.to(".main--bull", {opacity: 1});
 	}, 1000)
 
-	
-	
 	$('.spin-item__text').hide();
 	$('.main__text, .main__btns , .main__btns-res').hide();
 
@@ -195,6 +194,22 @@ window.onload = () => {
 				$('.main__text , .main__btns').fadeOut();
 
 				if($(window).width() < 1024){
+					$('.btn--primary').click(function(){
+						$('.spin-btn').trigger('click');
+						// gsap.to(".bull", {scale:"1",duration: 1,
+						// 	onComplete: function(){
+						// 		$('.spin-btn').trigger('click');
+						// 	}
+						// });
+						// gsap.to(".bull", {
+						// 	y: -20,
+						// 	scale:"1.5",
+						// 	duration: 2,
+						// 	delay: 2
+						// });
+
+					})
+
 					gsap.to(".bull", {
 						// backgroundImage:'url(../img/bull_horn.svg)',
 						y: -20,
@@ -214,6 +229,10 @@ window.onload = () => {
 					onComplete: showContent,
 				});
 				
+				$('.btn--primary').click(function(){
+					gsap.to(".bull", {scale:"1",duration: 1});
+					$('.spin-btn').trigger('click')
+				})
 			}
 		})
 	}
@@ -228,6 +247,8 @@ window.onload = () => {
 		$('.main--bull').fadeOut();
 		gsap.to(".main--gift", {opacity: 1});
 	})
+
+
 
 
 
