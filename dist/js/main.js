@@ -196,18 +196,6 @@ window.onload = () => {
 				if($(window).width() < 1024){
 					$('.btn--primary').click(function(){
 						$('.spin-btn').trigger('click');
-						// gsap.to(".bull", {scale:"1",duration: 1,
-						// 	onComplete: function(){
-						// 		$('.spin-btn').trigger('click');
-						// 	}
-						// });
-						// gsap.to(".bull", {
-						// 	y: -20,
-						// 	scale:"1.5",
-						// 	duration: 2,
-						// 	delay: 2
-						// });
-
 					})
 
 					gsap.to(".bull", {
@@ -230,7 +218,7 @@ window.onload = () => {
 				});
 				
 				$('.btn--primary').click(function(){
-					gsap.to(".bull", {scale:"1",duration: 1});
+					gsap.to(".bull", {scale:"1.2",duration: 1});
 					$('.spin-btn').trigger('click')
 				})
 			}

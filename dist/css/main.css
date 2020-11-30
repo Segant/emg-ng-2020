@@ -155,7 +155,7 @@ body {
 .main {
   height: 100vh;
   min-height: 900px;
-  overflow: hidden;
+  overflow: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
