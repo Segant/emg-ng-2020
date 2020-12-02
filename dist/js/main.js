@@ -226,7 +226,7 @@ window.onload = () => {
 	}
 
 	function showContent(){
-		$('.main--bull .main__title').html('А вот и твой <br> подарок!');
+		$('.main--bull .main__title').html('А вот и <br> твоё поздравление!');
 		$('.main__text-res , .main__btns-res').fadeIn();
 	}
 

@@ -347,23 +347,33 @@ body{
 }
 
 .spin-item {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 	&__title {
-		line-height: 100px;
+		// line-height: 100px;
 		font-size: 22px;
 	}
 }
 
 .spinned{
 	.spin-item__title{
-		line-height: 50px;
+		line-height: 24px;
 	}
 
 	.spin-item__text{
 		display: block !important;
 		font-size: 13px;
-    	font-weight: normal;
+		font-weight: normal;
+		
+		&--small{
+			font-size: 9px;
+		}
 	}
+
+	
 }
 
 // .main--spin{

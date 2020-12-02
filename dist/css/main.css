@@ -333,17 +333,32 @@ body {
     -webkit-transform: translateY(100px);
             transform: translateY(100px); }
 
-.spin-item__title {
-  line-height: 100px;
-  font-size: 22px; }
+.spin-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .spin-item__title {
+    font-size: 22px; }
 
 .spinned .spin-item__title {
-  line-height: 50px; }
+  line-height: 24px; }
 
 .spinned .spin-item__text {
   display: block !important;
   font-size: 13px;
   font-weight: normal; }
+  .spinned .spin-item__text--small {
+    font-size: 9px; }
 
 .main__title {
   font-weight: bold;
