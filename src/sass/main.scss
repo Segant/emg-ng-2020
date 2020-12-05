@@ -354,7 +354,7 @@ body{
 
 	&__title {
 		// line-height: 100px;
-		font-size: 22px;
+		font-size: 18px;
 	}
 }
 
@@ -375,6 +375,25 @@ body{
 
 	
 }
+
+// .spin__body.spinAnim{
+// 	animation: spin 3s ease;
+// }
+
+// @keyframes spin {
+// 	0% {
+// 		transform: translateY(0);
+// 	}
+
+// 	50%{
+// 		transform: translateY(-93%);
+// 	}
+
+// 	100% {
+// 		transform: translateY(0%);
+// 		opacity: 0;
+// 	}
+// }
 
 // .main--spin{
 	

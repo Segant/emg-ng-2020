@@ -348,7 +348,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center; }
   .spin-item__title {
-    font-size: 22px; }
+    font-size: 18px; }
 
 .spinned .spin-item__title {
   line-height: 24px; }

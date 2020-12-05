@@ -1,4 +1,24 @@
+window.addEventListener("DOMContentLoaded", event => {
+	const audio = document.querySelector("#bgSong");
+
+	document.querySelector('body').addEventListener('click', function () {
+		audio.play();
+	})
+
+	setTimeout(()=> {
+		document.querySelector('body').click();
+	}, 300)
+})
+
 window.onload = () => {
+
+
+
+
+
+	let clickSong = new Audio('../img/audio/click.wav');
+	let spinSong = new Audio('../img/audio/spin.wav');
+	let prizeSong = new Audio('../img/audio/prize.wav');
 
 	const Snow = (canvas, count, options) => {
 		const ctx = canvas.getContext('2d')
@@ -118,7 +138,8 @@ window.onload = () => {
 		window.webkitRequestAnimationFrame ||
 		window.msRequestAnimationFrame
 
-	  Snow(canvas, 150, { color: 'white' });
+	Snow(canvas, 150, { color: 'white' });
+
 
 
 	class Spin {
@@ -138,16 +159,17 @@ window.onload = () => {
 			const items = document.querySelectorAll(`.spin-item`);
 			const spinnerBody = document.querySelector(`.spin__body`);
 			const spinnerView = document.querySelector(`.spin__view`);
-			
+
 			items.forEach((item, i) => {
 				item.style.height = `${this.itemsHeight}px`
 			});
-			
+
 			const itemsHeight = items[0].offsetHeight;
 			const spinViewHeight = itemsHeight;
 			spinnerView.style.height = `${itemsHeight}px`;
-			
+
 			const btnFunc = () => {
+				spinnerBody.classList.add('spinAnim')
 				items.forEach((item, i) => {
 					item.classList.remove(this.activeClass);
 					item.classList.remove('spinned');
@@ -167,74 +189,88 @@ window.onload = () => {
 				el.addEventListener('click', btnFunc);
 			})
 
-			
+
 		}
 	}
 
-	setTimeout(function(){
+	setTimeout(function () {
 		$('.main--loader').fadeOut();
-		gsap.to(".main--bull", {opacity: 1});
+		gsap.to(".main--bull", { opacity: 1 });
 	}, 1000)
 
 	$('.spin-item__text').hide();
 	$('.main__text, .main__btns , .main__btns-res').hide();
 
 	$('.sub__btn').click(function (e) {
+		clickSong.play();
+
 		$('.main--bull').addClass('main--spin');
 		$('.main__text, .main__btns').show();
-		gsap.to(".sub", {opacity: 0});
+		gsap.to(".sub", { opacity: 0 });
 	});
 
-	if(document.querySelector(`.spin`)){
+	if (document.querySelector(`.spin`)) {
 		new Spin({
 			root: '.spin',
 			btn: '.spin-btn',
-			itemsHeight : '100',
-			btnCallback: function(){
+			itemsHeight: '100',
+			btnCallback: function () {
+				clickSong.play();
+				spinSong.play();
+				spinSong.volume = .3;
 				$('.main__text , .main__btns').fadeOut();
 
-				if($(window).width() < 1024){
-					$('.btn--primary').click(function(){
+				if ($(window).width() < 1024) {
+					$('.btn--primary').click(function () {
 						$('.spin-btn').trigger('click');
 					})
 
 					gsap.to(".bull", {
 						// backgroundImage:'url(../img/bull_horn.svg)',
 						y: 20,
-						scale:"1.8",
+						scale: "1.8",
+						duration: 2,
+						onComplete: showContent,
+					});
+					return
+
+				} else {
+					gsap.to(".bull", {
+						// backgroundImage:'url(../img/bull_horn.svg)',
+						y: 40,
+						scale: "1.2",
 						duration: 2,
 						onComplete: showContent,
 					});
 
-					return
+					$('.btn--primary').click(function () {
+						gsap.to(".bull", { scale: "1.2", duration: 1 });
+						$('.spin-btn').trigger('click')
+					})
 				}
-				
-				gsap.to(".bull", {
-					// backgroundImage:'url(../img/bull_horn.svg)',
-					y: 40,
-					scale:"1.2",
-					duration: 2,
-					onComplete: showContent,
-				});
-				
-				$('.btn--primary').click(function(){
-					gsap.to(".bull", {scale:"1.2",duration: 1});
-					$('.spin-btn').trigger('click')
-				})
+
 			}
 		})
 	}
 
-	function showContent(){
+	function showContent() {
 		$('.main--bull .main__title').html('А вот и <br> твоё поздравление!');
 		$('.main__text-res , .main__btns-res').fadeIn();
+		spinSong.pause();
 	}
 
-	$('.btnGetGift').click(function(e){
+	$('.btnGetGift').click(function (e) {
 		e.preventDefault();
 		$('.main--bull').fadeOut();
-		gsap.to(".main--gift", {opacity: 1});
+		gsap.to(".main--gift", { opacity: 1 });
+		prizeSong.play();
 	})
+
+
+
+
+
+
 
 
 
