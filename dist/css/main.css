@@ -210,8 +210,12 @@ body {
       line-height: 53px;
       letter-spacing: 1px; }
     .main--loader .main__title img {
+      -webkit-transition: all .3s;
+      transition: all .3s;
       -webkit-transform: translate(8px, 12px);
-              transform: translate(8px, 12px); }
+              transform: translate(8px, 12px);
+      -webkit-animation: logoAnim 2s ease .2s;
+              animation: logoAnim 2s ease .2s; }
   .main--loader .main__text {
     display: block !important;
     font-weight: normal;
@@ -219,6 +223,22 @@ body {
     font-size: 20px;
     line-height: 31px;
     text-transform: uppercase; }
+
+@-webkit-keyframes logoAnim {
+  from {
+    -webkit-transform: translate(8px, 12px);
+            transform: translate(8px, 12px); }
+  to {
+    -webkit-transform: translate(-96px, -300px) scale(0.5);
+            transform: translate(-96px, -300px) scale(0.5); } }
+
+@keyframes logoAnim {
+  from {
+    -webkit-transform: translate(8px, 12px);
+            transform: translate(8px, 12px); }
+  to {
+    -webkit-transform: translate(-96px, -300px) scale(0.5);
+            transform: translate(-96px, -300px) scale(0.5); } }
 
 .loader {
   position: absolute;

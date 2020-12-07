@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", event => {
 	const audio = document.querySelector("#bgSong");
 
 	document.querySelector('body').addEventListener('click', function () {
+		audio.volume = .3;
 		audio.play();
 	})
 

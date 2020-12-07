@@ -148,7 +148,9 @@ body{
 		}
 
 		img {
+			transition: all .3s;
 			transform: translate(8px, 12px);
+			animation: logoAnim 2s ease .2s;
 		}
 	}
 
@@ -162,7 +164,15 @@ body{
 	}
 }
 
+@keyframes logoAnim{
+	from{
+		transform: translate(8px, 12px);
+	}
 
+	to{
+		transform: translate(-96px, -300px) scale(0.5);
+	}
+}
 
 .loader {
 	position: absolute;
