@@ -216,13 +216,13 @@ window.onload = () => {
 				spinSong.play();
 				spinSong.volume = .3;
 				$('.main__text , .main__btns').fadeOut();
+				$('.bull').addClass('animBull');
 
 				if ($(window).width() < 1024) {
 					$('.btn--primary').click(function () {
 						$('.spin-btn').trigger('click');
-						$('.bull').addClass('animBull');
 					})
-
+					
 					gsap.to(".bull", {
 						// backgroundImage:'url(../img/bull_horn.svg)',
 						y: 20,
