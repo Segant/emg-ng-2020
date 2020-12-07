@@ -171,6 +171,19 @@ body{
 
 	to{
 		transform: translate(-96px, -300px) scale(0.5);
+
+	}
+}
+@media(max-width: 1024px){
+	@keyframes logoAnim{
+		from{
+			transform: translate(8px, 12px);
+		}
+	
+		to{
+			transform: translate(-78px, -141px) scale(0.5);
+	
+		}
 	}
 }
 

@@ -240,6 +240,22 @@ body {
     -webkit-transform: translate(-96px, -300px) scale(0.5);
             transform: translate(-96px, -300px) scale(0.5); } }
 
+@media (max-width: 1024px) {
+  @-webkit-keyframes logoAnim {
+    from {
+      -webkit-transform: translate(8px, 12px);
+              transform: translate(8px, 12px); }
+    to {
+      -webkit-transform: translate(-78px, -141px) scale(0.5);
+              transform: translate(-78px, -141px) scale(0.5); } }
+  @keyframes logoAnim {
+    from {
+      -webkit-transform: translate(8px, 12px);
+              transform: translate(8px, 12px); }
+    to {
+      -webkit-transform: translate(-78px, -141px) scale(0.5);
+              transform: translate(-78px, -141px) scale(0.5); } } }
+
 .loader {
   position: absolute;
   bottom: 0;
