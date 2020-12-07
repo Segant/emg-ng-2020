@@ -392,6 +392,11 @@ body{
 .spinned{
 	.spin-item__title{
 		line-height: 24px;
+
+		&--small{
+			font-size: 15px;
+			line-height: 18px;
+		}
 	}
 
 	.spin-item__text{
@@ -400,7 +405,7 @@ body{
 		font-weight: normal;
 		
 		&--small{
-			font-size: 9px;
+			font-size: 8px;
 		}
 	}
 

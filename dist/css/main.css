@@ -387,13 +387,16 @@ body {
 
 .spinned .spin-item__title {
   line-height: 24px; }
+  .spinned .spin-item__title--small {
+    font-size: 15px;
+    line-height: 18px; }
 
 .spinned .spin-item__text {
   display: block !important;
   font-size: 13px;
   font-weight: normal; }
   .spinned .spin-item__text--small {
-    font-size: 9px; }
+    font-size: 8px; }
 
 .main__title {
   font-weight: bold;
