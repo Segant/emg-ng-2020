@@ -13,10 +13,6 @@ window.addEventListener("DOMContentLoaded", event => {
 
 window.onload = () => {
 
-
-
-
-
 	let clickSong = new Audio('../img/audio/click.wav');
 	let spinSong = new Audio('../img/audio/spin.wav');
 	let prizeSong = new Audio('../img/audio/prize.wav');
@@ -224,6 +220,7 @@ window.onload = () => {
 				if ($(window).width() < 1024) {
 					$('.btn--primary').click(function () {
 						$('.spin-btn').trigger('click');
+						$('.bull').addClass('animBull');
 					})
 
 					gsap.to(".bull", {
