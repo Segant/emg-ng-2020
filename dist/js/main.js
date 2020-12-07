@@ -255,6 +255,7 @@ window.onload = () => {
 		$('.main--bull .main__title').html('А вот и <br> твоё поздравление!');
 		$('.main__text-res , .main__btns-res').fadeIn();
 		spinSong.pause();
+		$('.bull').removeClass('animBull');
 	}
 
 	$('.btnGetGift').click(function (e) {
