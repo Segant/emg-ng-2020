@@ -13,9 +13,9 @@ window.addEventListener("DOMContentLoaded", event => {
 
 window.onload = () => {
 
-	let clickSong = new Audio('../img/audio/click.wav');
-	let spinSong = new Audio('../img/audio/spin.wav');
-	let prizeSong = new Audio('../img/audio/prize.wav');
+	let clickSong = new Audio('../img/audio/click.mp3');
+	let spinSong = new Audio('../img/audio/spin.mp3');
+	let prizeSong = new Audio('../img/audio/prize.mp3');
 
 	const Snow = (canvas, count, options) => {
 		const ctx = canvas.getContext('2d')
