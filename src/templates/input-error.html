@@ -2,20 +2,14 @@
 <html lang="en">
 
 <head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta charset="utf-8">
-	<title></title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="">
+	{% include "includes/head.html"  %}
 
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-	
+	{% block content %}
 	<div class="frame-body">
 		<div class="bg"></div>
 		<canvas id='snow'></canvas>
@@ -303,10 +297,11 @@
 						<div class="main__text main__text--footer">Испытать удачу можно трижды!</div>
 					</div>
 					<div class="sub">
-						<input type="text" class="sub__input" placeholder="введи Рабочий e-mail">
+						<input type="text" class="sub__input error" placeholder="введи Рабочий e-mail">
 						<button class="sub__btn">
 							<img src="img/arrow_next.gif" alt="arr-next">
 						</button>
+						<div class="sub__error">место для информации об ошибке</div>
 						
 					</div>
 
@@ -326,14 +321,9 @@
 		</div>
 
 	</div>
-	
+	{% endblock %}
 
-	<script src="js/lodash.min.js"></script>
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-<script src="js/main.js"></script>
-
-
+	{% include "includes/footer.html"  %}
 </body>
 
 </html>

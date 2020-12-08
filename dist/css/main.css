@@ -319,7 +319,12 @@ body {
   display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .sub__input {
     background: #FFFFFF;
     border-radius: 12px;
@@ -342,6 +347,9 @@ body {
     .sub__input::placeholder {
       opacity: 0.5;
       text-transform: uppercase; }
+    .sub__input.error {
+      color: #D80000;
+      font-weight: bold; }
   .sub__btn {
     width: 52px;
     height: 52px;
@@ -350,6 +358,11 @@ body {
     border: none;
     padding: 3px 9px;
     cursor: pointer; }
+  .sub__error {
+    width: 100%;
+    margin-top: 7px;
+    font-size: 12px;
+    margin-left: -105px; }
 
 .spin {
   position: absolute;
