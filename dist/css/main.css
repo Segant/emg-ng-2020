@@ -470,7 +470,8 @@ body {
   display: none;
   max-width: 350px;
   font-size: 12px;
-  line-height: 1.3; }
+  line-height: 1.3;
+  padding-bottom: 20px; }
 
 .main__btns-res {
   display: -webkit-box;
@@ -498,22 +499,6 @@ body {
   .btn--primary {
     color: white;
     background: #0F0F75; }
-
-#horn:hover .a1 {
-  -webkit-animation: 2s linear infinite both a1_d !important;
-          animation: 2s linear infinite both a1_d !important; }
-
-#horn:hover .a2 {
-  -webkit-animation: 2s linear infinite both a2_t !important;
-          animation: 2s linear infinite both a2_t !important; }
-
-#horn_l:hover .b1 {
-  -webkit-animation: 2s linear infinite both a3_d !important;
-          animation: 2s linear infinite both a3_d !important; }
-
-#horn_l:hover .b2 {
-  -webkit-animation: 2s linear infinite both a4_t !important;
-          animation: 2s linear infinite both a4_t !important; }
 
 .animBull #horn.a1 {
   -webkit-animation: 2s linear infinite both a1_d !important;
