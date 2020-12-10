@@ -204,6 +204,7 @@ window.onload = () => {
 		$('.main--bull').addClass('main--spin');
 		$('.main__text, .main__btns').show();
 		gsap.to(".sub", { opacity: 0 });
+		$('.sub').hide();
 	});
 
 	if (document.querySelector(`.spin`)) {
@@ -259,6 +260,7 @@ window.onload = () => {
 	}
 
 	$('.btnGetGift').click(function (e) {
+		
 		e.preventDefault();
 		$('.main--bull').fadeOut();
 		gsap.to(".main--gift", { opacity: 1 });

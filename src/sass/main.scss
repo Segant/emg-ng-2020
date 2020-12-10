@@ -384,7 +384,7 @@ body{
 	}
 
 	&__body {
-		transition: all .5s ease-in-out;
+		transition: all 3s ease-in-out;
 		transform: translateY(100px);
 	}
 
@@ -545,6 +545,7 @@ body{
 	display: flex;
 	margin-bottom: 28px;
 	z-index: 1;
+	margin-top: 40px;
 }
 
 .btn{

@@ -24,8 +24,8 @@
     .main--loader .main__text {
       font-size: 18px; }
   .main--home {
-    padding-top: 77px;
-    padding-bottom: 90px; }
+    padding-top: 30px;
+    padding-bottom: 30px; }
     .main--home .main__logo {
       margin-bottom: 85px; }
     .main--home .main__title {
@@ -90,4 +90,8 @@
     .main--spin .spin {
       top: 111px;
       -webkit-transform: scale(0.7);
-              transform: scale(0.7); } }
+              transform: scale(0.7); }
+  .main__btns-res {
+    margin-top: 80px; }
+  .spin-item__title {
+    font-size: 16px; } }
