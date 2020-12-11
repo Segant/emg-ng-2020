@@ -179,11 +179,14 @@ window.onload = () => {
 				items[randomNum].classList.add('spinned')
 
 				this.btnCallback();
+
+				console.log(items[randomNum])
+				return items[randomNum];
 			}
 
 
 			btn.forEach((el, i) => {
-				el.addEventListener('click', btnFunc);
+				el.onclick = btnFunc;
 			})
 
 
@@ -210,7 +213,7 @@ window.onload = () => {
 	if (document.querySelector(`.spin`)) {
 		new Spin({
 			root: '.spin',
-			btn: '.spin-btn',
+			btn: ['.spin-btn', '.btn--primary'],
 			itemsHeight: '100',
 			btnCallback: function () {
 				clickSong.play();
@@ -220,12 +223,8 @@ window.onload = () => {
 				$('.bull').addClass('animBull');
 
 				if ($(window).width() < 1024) {
-					$('.btn--primary').click(function () {
-						$('.spin-btn').trigger('click');
-					})
 					
 					gsap.to(".bull", {
-						// backgroundImage:'url(../img/bull_horn.svg)',
 						y: 20,
 						scale: "1.8",
 						duration: 2,
@@ -235,17 +234,11 @@ window.onload = () => {
 
 				} else {
 					gsap.to(".bull", {
-						// backgroundImage:'url(../img/bull_horn.svg)',
 						y: 40,
 						scale: "1.2",
 						duration: 2,
 						onComplete: showContent,
 					});
-
-					$('.btn--primary').click(function () {
-						gsap.to(".bull", { scale: "1.2", duration: 1 });
-						$('.spin-btn').trigger('click')
-					})
 				}
 
 			}
@@ -257,14 +250,10 @@ window.onload = () => {
 		$('.main__text-res , .main__btns-res').fadeIn();
 		spinSong.pause();
 		$('.bull').removeClass('animBull');
-
-		// if($(window).width() <= 600){
-			$('.main__inner').addClass('overflow-hidden');
-		// }
+		$('.main__inner').addClass('overflow-hidden');
 	}
 
 	$('.btnGetGift').click(function (e) {
-		
 		e.preventDefault();
 		$('.main--bull').fadeOut();
 		gsap.to(".main--gift", { opacity: 1 });
