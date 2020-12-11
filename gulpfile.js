@@ -75,19 +75,19 @@ gulp.task('libs', () => {
 });
 
 gulp.task('clean', () => {
-  return gulp.src('dist/',{read: false})
-  .pipe(clean({force: true}))
+  return gulp.src('dist/', { read: false })
+    .pipe(clean({ force: true }))
 });
 
 gulp.task('folders', () => {
-  return gulp.src('*.*',{read: false})
-  .pipe(gulp.dest(folder.dist + 'img'))
-  .pipe(gulp.dest(folder.dist + 'fonts'))
+  return gulp.src('*.*', { read: false })
+    .pipe(gulp.dest(folder.dist + 'img'))
+    .pipe(gulp.dest(folder.dist + 'fonts'))
 });
 
 gulp.task('copy-img', () => {
   return gulp.src(folder.dist + path.images)
-  .pipe(gulp.dest(folder.src + 'img'))
+    .pipe(gulp.dest(folder.src + 'img'))
 });
 
 
@@ -113,5 +113,5 @@ gulp.task('serve', function () {
 
 
 
-gulp.task('setup', gulp.parallel(['folders','html', 'css', 'js', 'images', 'fonts', 'libs']));
+gulp.task('setup', gulp.parallel(['folders', 'html', 'css', 'js', 'images', 'fonts', 'libs']));
 gulp.task('default', gulp.parallel(['html', 'css', 'js', 'images', 'fonts', 'libs']));
