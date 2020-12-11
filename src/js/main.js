@@ -13,9 +13,9 @@ window.addEventListener("DOMContentLoaded", event => {
 
 window.onload = () => {
 
-	let clickSong = new Audio('../img/audio/click.mp3');
-	let spinSong = new Audio('../img/audio/spin.mp3');
-	let prizeSong = new Audio('../img/audio/prize.mp3');
+	let clickSong = new Audio('img/audio/click.mp3');
+	let spinSong = new Audio('img/audio/spin.mp3');
+	let prizeSong = new Audio('img/audio/prize.mp3');
 
 	const Snow = (canvas, count, options) => {
 		const ctx = canvas.getContext('2d')
@@ -257,7 +257,10 @@ window.onload = () => {
 		$('.main__text-res , .main__btns-res').fadeIn();
 		spinSong.pause();
 		$('.bull').removeClass('animBull');
-		$('.main__inner').addClass('overflow-hidden')
+
+		// if($(window).width() <= 600){
+			$('.main__inner').addClass('overflow-hidden');
+		// }
 	}
 
 	$('.btnGetGift').click(function (e) {

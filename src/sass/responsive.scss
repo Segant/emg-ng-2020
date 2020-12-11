@@ -1,3 +1,5 @@
+@media(max-width: 374px) { .main--home .main__img {width: 100%} }
+
 @media(max-width: 1000px) {
 	.main {
 		min-height: 100vh;
@@ -16,7 +18,6 @@
 		justify-content: flex-start;
 		
 		.main__inner {
-			
 			transform: translateY(58%);
 
 		}
@@ -40,6 +41,10 @@
 		.main__text {
 			font-size: 18px;
 		}
+
+		.main__img{
+			width: 100%;
+		}
 	}
 
 	.main--home{
@@ -54,8 +59,11 @@
 			font-size: 31px;
 		}
 
+		
+
 		.main__img{
-			width: 374px;
+			// width: 374px;
+			width: 100%;
 			margin-top: 18px;
 		}
 		.bull{

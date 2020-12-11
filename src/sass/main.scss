@@ -95,6 +95,16 @@ body{
 
 .overflow-hidden{
 	overflow: hidden;
+	width: 100%;
+
+	.main__img{
+		width: 100%;
+	}
+
+	// .main__inner{
+	// 	overflow: hidden;
+	// 	width: 100%;
+	// }
 }
 
 #snow {
@@ -288,7 +298,8 @@ body{
 				width: 48px;
 				height: 70px;
 				top: 138px;
-				left: 45px;
+				// left: 45px;
+				left: 122px;
 			
 			}
 		}
