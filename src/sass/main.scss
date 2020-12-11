@@ -59,7 +59,7 @@ body{
 }
 
 .frames{
-	overflow-y: hidden;
+	overflow: hidden;
 }
 
 .bg {
@@ -91,6 +91,10 @@ body{
 	z-index: -1;
 	min-height: 100vh;
 	height: 100%;
+}
+
+.overflow-hidden{
+	overflow: hidden;
 }
 
 #snow {

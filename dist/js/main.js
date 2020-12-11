@@ -257,6 +257,7 @@ window.onload = () => {
 		$('.main__text-res , .main__btns-res').fadeIn();
 		spinSong.pause();
 		$('.bull').removeClass('animBull');
+		$('.main__inner').addClass('overflow-hidden')
 	}
 
 	$('.btnGetGift').click(function (e) {

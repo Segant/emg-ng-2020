@@ -116,7 +116,7 @@ body {
   line-height: 33px; }
 
 .frames {
-  overflow-y: hidden; }
+  overflow: hidden; }
 
 .bg {
   display: block;
@@ -146,6 +146,9 @@ body {
   z-index: -1;
   min-height: 100vh;
   height: 100%; }
+
+.overflow-hidden {
+  overflow: hidden; }
 
 #snow {
   position: absolute;
@@ -537,8 +540,7 @@ body {
   .main {
     min-height: 100vh;
     height: 100%;
-    width: 100%;
-    overflow-y: hidden; }
+    width: 100%; }
   .main--loader {
     -webkit-box-pack: start;
         -ms-flex-pack: start;

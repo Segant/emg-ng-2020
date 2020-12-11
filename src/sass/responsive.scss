@@ -3,16 +3,20 @@
 		min-height: 100vh;
 		height: 100%;
 		width: 100%;
-		overflow-y: hidden;
 		// overflow: hidden;
 		// background-image: url('../img/words_bg.gif');
 	}
 
+	.main__inner{
+		// width: 100%;
+		// overflow: hidden;
+	}
+	
 	.main--loader {
 		justify-content: flex-start;
-
+		
 		.main__inner {
-
+			
 			transform: translateY(58%);
 
 		}
