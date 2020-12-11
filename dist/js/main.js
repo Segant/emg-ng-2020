@@ -269,6 +269,7 @@ window.onload = () => {
 		$('.main--bull').fadeOut();
 		gsap.to(".main--gift", { opacity: 1 });
 		prizeSong.play();
+		$('.main__inner').removeClass('overflow-hidden');
 	})
 
 
