@@ -1,6 +1,6 @@
 @media(max-width: 374px) { .main--home .main__img {width: 100%} }
 
-@media(max-width: 1000px) {
+@media(max-width: 1024px) {
 	.main {
 		min-height: 100vh;
 		height: 100%;
@@ -34,7 +34,8 @@
 
 			img {
 				width: 88px;
-				transform: translate(5px, 8px);
+				top: -212px;
+				right: -130px;
 			}
 		}
 
@@ -149,6 +150,6 @@
 	}
 
 	.spin-item__title{
-		font-size: 16px;
+		font-size: 15px;
 	}
 }

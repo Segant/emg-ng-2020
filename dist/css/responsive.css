@@ -2,7 +2,7 @@
   .main--home .main__img {
     width: 100%; } }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .main {
     min-height: 100vh;
     height: 100%;
@@ -23,8 +23,8 @@
         line-height: 1; }
       .main--loader .main__title img {
         width: 88px;
-        -webkit-transform: translate(5px, 8px);
-                transform: translate(5px, 8px); }
+        top: -212px;
+        right: -130px; }
     .main--loader .main__text {
       font-size: 18px; }
     .main--loader .main__img {
@@ -100,4 +100,4 @@
   .main__btns-res {
     margin-top: 80px; }
   .spin-item__title {
-    font-size: 16px; } }
+    font-size: 15px; } }

@@ -196,7 +196,7 @@ window.onload = () => {
 	setTimeout(function () {
 		$('.main--loader').fadeOut();
 		gsap.to(".main--bull", { opacity: 1 });
-	}, 1000)
+	}, 1700)
 
 	$('.spin-item__text').hide();
 	$('.main__text, .main__btns , .main__btns-res').hide();
