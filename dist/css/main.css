@@ -155,7 +155,7 @@ body {
 .overflow-hidden {
   overflow: hidden;
   width: 100%;
-  min-height: auto !important; }
+  /* min-height: auto !important; */ }
   .overflow-hidden .main__img {
     width: 100%; }
 
