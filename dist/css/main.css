@@ -194,7 +194,7 @@ body {
           -ms-flex-pack: start;
               justify-content: flex-start;
       top: 77px; }
-    .main .main-spin-finished {
+    .main.main-spin-finished {
       top: 40px; } }
   .main__inner {
     display: -webkit-box;
