@@ -155,7 +155,7 @@ body {
 .overflow-hidden {
   overflow: hidden;
   width: 100%;
-  min-height: auto: !important; }
+  min-height: auto !important; }
   .overflow-hidden .main__img {
     width: 100%; }
 
@@ -193,7 +193,9 @@ body {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
-      top: 77px; } }
+      top: 77px; }
+    .main .main-spin-finished {
+      top: 40px; } }
   .main__inner {
     display: -webkit-box;
     display: -ms-flexbox;

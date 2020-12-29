@@ -250,7 +250,8 @@ window.onload = () => {
 		$('.main__text-res , .main__btns-res').fadeIn();
 		spinSong.pause();
 		$('.bull').removeClass('animBull');
-		$('.main__inner').addClass('overflow-hidden');
+		$('.main__inner').addClass('overflow-hidden').parent().addClass('.main-spin-finished');
+
 	}
 
 	$('.btnGetGift').click(function (e) {
@@ -258,7 +259,7 @@ window.onload = () => {
 		$('.main--bull').fadeOut();
 		gsap.to(".main--gift", { opacity: 1 });
 		prizeSong.play();
-		$('.main__inner').removeClass('overflow-hidden');
+		$('.main__inner').removeClass('overflow-hidden').parent().removeClass('.main-spin-finished');
 	})
 
 
